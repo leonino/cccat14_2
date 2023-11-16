@@ -1,8 +1,8 @@
-drop schema cccat14 cascade;
+drop schema app cascade;
 
-create schema cccat14;
+create schema app;
 
-create table cccat14.account (
+create table app.account (
 	account_id uuid primary key,
 	name text not null,
 	email text not null,
@@ -12,7 +12,7 @@ create table cccat14.account (
 	is_driver boolean not null default false
 );
 
-create table cccat14.ride (
+create table app.ride (
 	ride_id uuid primary key,
 	passenger_id uuid,
 	driver_id uuid,

@@ -1,9 +1,9 @@
-import AccountDAO from "../src/AccountDAO";
-import AccountDAODatabase from "../src/AccountDAODatabase";
-import GetAccount from "../src/GetAccount";
-import Logger from "../src/Logger";
-import LoggerConsole from "../src/LoggerConsole";
-import Signup from "../src/Signup";
+import AccountDAO from "../src/domain/AccountDAO";
+import AccountDAODatabase from "../src/external/AccountDAODatabase";
+import GetAccount from "../src/domain/GetAccount";
+import Logger from "../src/domain/Logger";
+import LoggerConsole from "../src/external/LoggerConsole";
+import Signup from "../src/domain/Signup";
 import sinon from "sinon";
 
 

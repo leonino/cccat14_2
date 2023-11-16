@@ -1,8 +1,8 @@
 import express, { Request, Response } from "express";
-import Signup from "./Signup";
-import GetAccount from "./GetAccount";
-import AccountDAODatabase from "./AccountDAODatabase";
-import LoggerConsole from "./LoggerConsole";
+import Signup from "./domain/Signup";
+import GetAccount from "./domain/GetAccount";
+import AccountDAODatabase from "./external/AccountDAODatabase";
+import LoggerConsole from "./external/LoggerConsole";
 
 const app = express();
 app.use(express.json());

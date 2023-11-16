@@ -1,12 +1,12 @@
-import AccountDAO from "../src/AccountDAO";
-import AccountDAODatabase from "../src/AccountDAODatabase";
-import GetAccount from "../src/GetAccount";
-import GetRide from "../src/GetRide";
-import Logger from "../src/Logger";
-import LoggerConsole from "../src/LoggerConsole";
-import RequestRide from "../src/RequestRide";
-import RideDAODatabase from "../src/RideDAODatabase";
-import Signup from "../src/Signup";
+import AccountDAO from "../src/domain/AccountDAO";
+import AccountDAODatabase from "../src/external/AccountDAODatabase";
+import GetAccount from "../src/domain/GetAccount";
+import GetRide from "../src/domain/GetRide";
+import Logger from "../src/domain/Logger";
+import LoggerConsole from "../src/external/LoggerConsole";
+import RequestRide from "../src/domain/RequestRide";
+import RideDAODatabase from "../src/external/RideDAODatabase";
+import Signup from "../src/domain/Signup";
 import sinon from "sinon";
 
 
