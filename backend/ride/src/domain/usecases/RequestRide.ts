@@ -1,6 +1,6 @@
 import crypto from "crypto";
-import Logger from "./Logger";
-import RideDAO from "./RideDAO";
+import Logger from "../../infra/Logger";
+import RideDAO from "../daos/RideDAO";
 
 export default class RequestRide {
 

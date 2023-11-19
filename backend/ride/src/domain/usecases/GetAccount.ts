@@ -1,5 +1,5 @@
-import AccountDAO from "../external/AccountDAODatabase";
-import GetAccountAccountDAO from "./GetAccountAccountDAO";
+import AccountDAO from "../../external/AccountDAODatabase";
+import GetAccountAccountDAO from "../daos/GetAccountAccountDAO";
 
 export default class GetAccount {
 

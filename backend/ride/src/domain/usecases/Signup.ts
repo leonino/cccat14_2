@@ -1,8 +1,8 @@
 import crypto from "crypto";
-import AccountDAO from "./AccountDAO";
-import { validateCpf } from "./CpfValidator";
-import Logger from "./Logger";
-import SignupAccountDAO from "./SignupAccountDAO";
+import AccountDAO from "../daos/AccountDAO";
+import Logger from "../../infra/Logger";
+import SignupAccountDAO from "../daos/SignupAccountDAO";
+import Cpf from '../valueObjects/Cpf';
 
 export default class Signup {
 
@@ -16,7 +16,7 @@ export default class Signup {
 		if (account) throw new Error("Duplicated account");
 		if (this.isInvalidName(input.name)) throw new Error("Invalid name");
 		if (this.isInvalidEmail(input.email)) throw new Error("Invalid email");
-		if (!validateCpf(input.cpf)) throw new Error("Invalid cpf");
+		if (!(new Cpf(input.cpf)).validate()) throw new Error("Invalid cpf");
 		if (input.isDriver && this.isInvalidCarPlate(input.carPlate)) throw new Error("Invalid car plate");
 		await this.accountDAO.save(input);
 		return {

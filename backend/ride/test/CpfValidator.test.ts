@@ -1,11 +1,11 @@
-import { validateCpf } from "../src/domain/CpfValidator";
+import Cpf from '../src/domain/valueObjects/Cpf';
 
 test.each([
-	"97456321558",
-	"71428793860",
-	"87748248800"
-])("Deve testar cpfs válidos", function (cpf: string) {
-	expect(validateCpf(cpf)).toBe(true);
+	new Cpf("97456321558"),
+	new Cpf("71428793860"),
+	new Cpf("87748248800")
+])("Deve testar cpfs válidos", function (cpf: Cpf) {
+	expect(cpf.validate()).toBe(true);
 });
 
 test.each([
@@ -16,5 +16,5 @@ test.each([
 	"111",
 	"11111111111111"
 ])("Deve testar cpfs inválidos", function (cpf: any) {
-	expect(validateCpf(cpf)).toBe(false);
+	expect(new Cpf(cpf).validate()).toBe(false);
 });

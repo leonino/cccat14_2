@@ -1,9 +1,9 @@
 import pgp from "pg-promise";
-import AccountDAO from "../domain/AccountDAO";
-import GetAccountAccountDAO from "../domain/GetAccountAccountDAO";
-import SignupAccountDAO from "../domain/SignupAccountDAO";
+import AccountDAO from "../domain/daos/AccountDAO";
+import GetAccountAccountDAO from "../domain/daos/GetAccountAccountDAO";
+import SignupAccountDAO from "../domain/daos/SignupAccountDAO";
 
-export default class AccountDAODatabase implements AccountDAO, SignupAccountDAO, GetAccountAccountDAO {
+export default class AccountDAODatabase implements AccountDAO {
 
 	async save (account: any) {
 		const connection = pgp()("postgres://postgres:123456@localhost:5432/app");
